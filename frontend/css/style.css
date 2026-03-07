@@ -562,3 +562,35 @@ body {
 .btn-edit:hover {
   background: #d97706;
 }
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.service-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.service-info h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.service-info p {
+  margin-bottom: 4px;
+  color: #4b5563;
+}
+
+@media (max-width: 900px) {
+  .service-card {
+    flex-direction: column;
+  }
+}

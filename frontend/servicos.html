@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudioFlow - Serviços</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h2>StudioFlow</h2>
+        <p>Gestão do estúdio</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="clientes.html" class="nav-link">Clientes</a>
+        <a href="profissionais.html" class="nav-link">Profissionais</a>
+        <a href="servicos.html" class="nav-link active">Serviços</a>
+        <a href="agendamentos.html" class="nav-link">Agendamentos</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1>Serviços</h1>
+          <p>Cadastre e gerencie os serviços oferecidos pelo StudioFlow</p>
+        </div>
+      </header>
+
+      <section class="card form-card">
+        <h2>Novo serviço</h2>
+
+        <form id="formServico" class="form-grid">
+          <div class="form-group">
+            <label for="nomeServico">Nome do serviço</label>
+            <input type="text" id="nomeServico" placeholder="Ex: Corte masculino" required />
+          </div>
+
+          <div class="form-group">
+            <label for="precoServico">Preço</label>
+            <input type="number" id="precoServico" placeholder="Ex: 45.00" step="0.01" min="0" required />
+          </div>
+
+          <div class="form-group">
+            <label for="duracaoServico">Duração</label>
+            <input type="text" id="duracaoServico" placeholder="Ex: 45 min" required />
+          </div>
+
+          <div class="form-group">
+            <label for="descricaoServico">Descrição</label>
+            <input type="text" id="descricaoServico" placeholder="Ex: Corte completo com acabamento" />
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Salvar serviço</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card list-card">
+        <div class="section-title">
+          <h2>Lista de serviços</h2>
+          <span id="contadorServicos" class="badge-count">0 serviços</span>
+        </div>
+
+        <div id="listaServicos" class="service-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/servicos.js"></script>
+</body>
+</html>
