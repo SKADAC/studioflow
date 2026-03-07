@@ -1,104 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>StudioFlow - Agendamentos</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudioFlow - Agendamentos</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h2>StudioFlow</h2>
+        <p>Gestão do estúdio</p>
+      </div>
 
-<div class="app-layout">
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="clientes.html" class="nav-link">Clientes</a>
+        <a href="profissionais.html" class="nav-link">Profissionais</a>
+        <a href="servicos.html" class="nav-link">Serviços</a>
+        <a href="agendamentos.html" class="nav-link active">Agendamentos</a>
+      </nav>
+    </aside>
 
-<aside class="sidebar">
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Agendamentos</h1>
+          <p>Agenda do estúdio</p>
+        </div>
 
-<div class="sidebar-brand">
-<h2>StudioFlow</h2>
-<p>Gestão do estúdio</p>
-</div>
+        <button class="primary-button">Novo Agendamento</button>
+      </header>
 
-<nav class="sidebar-nav">
-<a href="dashboard.html" class="nav-link">Dashboard</a>
-<a href="clientes.html" class="nav-link">Clientes</a>
-<a href="profissionais.html" class="nav-link">Profissionais</a>
-<a href="servicos.html" class="nav-link">Serviços</a>
-<a href="agendamentos.html" class="nav-link active">Agendamentos</a>
-</nav>
+      <section class="content-grid-agendamento">
+        <div class="card">
+          <div class="section-header">
+            <h2>Novo Agendamento</h2>
+          </div>
 
-</aside>
+          <form class="form-grid">
+            <div class="form-group">
+              <label for="cliente">Cliente</label>
+              <select id="cliente" name="cliente">
+                <option value="">Selecione um cliente</option>
+                <option value="fernanda-silva">Fernanda Silva</option>
+                <option value="joao-pedro">João Pedro</option>
+                <option value="mariana-costa">Mariana Costa</option>
+              </select>
+            </div>
 
-<main class="main-content">
+            <div class="form-group">
+              <label for="profissional">Profissional</label>
+              <select id="profissional" name="profissional">
+                <option value="">Selecione um profissional</option>
+                <option value="ana-manicure">Ana - Manicure</option>
+                <option value="marcos-barbeiro">Marcos - Barbeiro</option>
+              </select>
+            </div>
 
-<header class="topbar">
+            <div class="form-group">
+              <label for="servico">Serviço</label>
+              <select id="servico" name="servico">
+                <option value="">Selecione um serviço</option>
+                <option value="alongamento">Alongamento</option>
+                <option value="pe-e-mao">Pé e Mão</option>
+                <option value="corte">Corte</option>
+                <option value="barba">Barba</option>
+                <option value="corte-e-barba">Corte + Barba</option>
+              </select>
+            </div>
 
-<div>
-<h1>Agendamentos</h1>
-<p>Agenda do estúdio</p>
-</div>
+            <div class="form-group">
+              <label for="data">Data</label>
+              <input type="date" id="data" name="data" />
+            </div>
 
-<button class="primary-button">
-Novo Agendamento
-</button>
+            <div class="form-group">
+              <label for="hora">Hora</label>
+              <input type="time" id="hora" name="hora" />
+            </div>
 
-</header>
+            <div class="form-group">
+              <label for="status">Status</label>
+              <select id="status" name="status">
+                <option value="confirmado">Confirmado</option>
+                <option value="pendente">Pendente</option>
+                <option value="cancelado">Cancelado</option>
+                <option value="concluido">Concluído</option>
+              </select>
+            </div>
 
-<div class="card">
+            <div class="form-group form-group-full">
+              <label for="observacoes">Observações</label>
+              <textarea
+                id="observacoes"
+                name="observacoes"
+                rows="4"
+                placeholder="Digite alguma observação..."
+              ></textarea>
+            </div>
 
-<table class="data-table">
+            <div class="form-group form-group-full">
+              <button type="submit" class="primary-button">Salvar Agendamento</button>
+            </div>
+          </form>
+        </div>
 
-<thead>
-<tr>
-<th>Data</th>
-<th>Hora</th>
-<th>Cliente</th>
-<th>Profissional</th>
-<th>Serviço</th>
-<th>Status</th>
-<th>Ações</th>
-</tr>
-</thead>
+        <div class="card">
+          <div class="section-header">
+            <h2>Próximos Agendamentos</h2>
+          </div>
 
-<tbody>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Hora</th>
+                <th>Cliente</th>
+                <th>Profissional</th>
+                <th>Serviço</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
 
-<tr>
-<td>10/03/2026</td>
-<td>14:00</td>
-<td>Fernanda Silva</td>
-<td>Ana</td>
-<td>Alongamento</td>
-<td>Confirmado</td>
-<td><button class="table-button">Editar</button></td>
-</tr>
+            <tbody>
+              <tr>
+                <td>10/03/2026</td>
+                <td>14:00</td>
+                <td>Fernanda Silva</td>
+                <td>Ana</td>
+                <td>Alongamento</td>
+                <td><span class="status confirmado">Confirmado</span></td>
+                <td><button class="table-button">Editar</button></td>
+              </tr>
 
-<tr>
-<td>10/03/2026</td>
-<td>15:00</td>
-<td>João Pedro</td>
-<td>Marcos</td>
-<td>Corte + Barba</td>
-<td>Confirmado</td>
-<td><button class="table-button">Editar</button></td>
-</tr>
+              <tr>
+                <td>10/03/2026</td>
+                <td>15:00</td>
+                <td>João Pedro</td>
+                <td>Marcos</td>
+                <td>Corte + Barba</td>
+                <td><span class="status confirmado">Confirmado</span></td>
+                <td><button class="table-button">Editar</button></td>
+              </tr>
 
-<tr>
-<td>10/03/2026</td>
-<td>16:30</td>
-<td>Mariana Costa</td>
-<td>Ana</td>
-<td>Pé e Mão</td>
-<td>Pendente</td>
-<td><button class="table-button">Editar</button></td>
-</tr>
+              <tr>
+                <td>10/03/2026</td>
+                <td>16:30</td>
+                <td>Mariana Costa</td>
+                <td>Ana</td>
+                <td>Pé e Mão</td>
+                <td><span class="status pendente">Pendente</span></td>
+                <td><button class="table-button">Editar</button></td>
+              </tr>
 
-</tbody>
+              <tr>
+                <td>11/03/2026</td>
+                <td>09:30</td>
+                <td>Camila Rocha</td>
+                <td>Ana</td>
+                <td>Manutenção</td>
+                <td><span class="status cancelado">Cancelado</span></td>
+                <td><button class="table-button">Editar</button></td>
+              </tr>
 
-</table>
-
-</div>
-
-</main>
-
-</div>
-
+              <tr>
+                <td>11/03/2026</td>
+                <td>11:00</td>
+                <td>Lucas Martins</td>
+                <td>Marcos</td>
+                <td>Barba</td>
+                <td><span class="status concluido">Concluído</span></td>
+                <td><button class="table-button">Editar</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
