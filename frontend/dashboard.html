@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudioFlow - Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h2>StudioFlow</h2>
+        <p>Gestão do estúdio</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-link active">Dashboard</a>
+        <a href="clientes.html" class="nav-link">Clientes</a>
+        <a href="profissionais.html" class="nav-link">Profissionais</a>
+        <a href="servicos.html" class="nav-link">Serviços</a>
+        <a href="agendamentos.html" class="nav-link">Agendamentos</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Dashboard</h1>
+          <p>Visão geral do StudioFlow</p>
+        </div>
+        <button class="primary-button">Novo Agendamento</button>
+      </header>
+
+      <section class="cards-grid">
+        <div class="card summary-card">
+          <span class="card-label">Clientes</span>
+          <h3>124</h3>
+          <p>Total cadastrados</p>
+        </div>
+
+        <div class="card summary-card">
+          <span class="card-label">Profissionais</span>
+          <h3>2</h3>
+          <p>Ativos no sistema</p>
+        </div>
+
+        <div class="card summary-card">
+          <span class="card-label">Agendamentos Hoje</span>
+          <h3>8</h3>
+          <p>Confirmados para hoje</p>
+        </div>
+
+        <div class="card summary-card">
+          <span class="card-label">Faturamento</span>
+          <h3>R$ 680</h3>
+          <p>Estimado do dia</p>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="card">
+          <div class="section-header">
+            <h2>Próximos Agendamentos</h2>
+          </div>
+
+          <div class="appointment-list">
+            <div class="appointment-item">
+              <div>
+                <strong>Fernanda Silva</strong>
+                <p>Manicure • Alongamento</p>
+              </div>
+              <span>14:00</span>
+            </div>
+
+            <div class="appointment-item">
+              <div>
+                <strong>João Pedro</strong>
+                <p>Barbeiro • Corte + Barba</p>
+              </div>
+              <span>15:00</span>
+            </div>
+
+            <div class="appointment-item">
+              <div>
+                <strong>Mariana Costa</strong>
+                <p>Manicure • Pé e Mão</p>
+              </div>
+              <span>16:30</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="section-header">
+            <h2>Resumo Rápido</h2>
+          </div>
+
+          <div class="quick-info">
+            <p><strong>Negócio:</strong> StudioFlow Demo</p>
+            <p><strong>Especialidades:</strong> Manicure e Barbearia</p>
+            <p><strong>Status:</strong> Operando normalmente</p>
+            <p><strong>Último cadastro:</strong> Cliente Ana Souza</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
