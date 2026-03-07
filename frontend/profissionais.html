@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudioFlow - Profissionais</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h2>StudioFlow</h2>
+        <p>Gestão do estúdio</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="clientes.html" class="nav-link">Clientes</a>
+        <a href="profissionais.html" class="nav-link active">Profissionais</a>
+        <a href="servicos.html" class="nav-link">Serviços</a>
+        <a href="agendamentos.html" class="nav-link">Agendamentos</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1>Profissionais</h1>
+          <p>Cadastre e gerencie os profissionais do StudioFlow</p>
+        </div>
+      </header>
+
+      <section class="card form-card">
+        <h2>Novo profissional</h2>
+
+        <form id="formProfissional" class="form-grid">
+          <div class="form-group">
+            <label for="nomeProfissional">Nome</label>
+            <input type="text" id="nomeProfissional" placeholder="Digite o nome" required />
+          </div>
+
+          <div class="form-group">
+            <label for="especialidadeProfissional">Especialidade</label>
+            <input type="text" id="especialidadeProfissional" placeholder="Ex: Cabelo, Barba, Estética..." required />
+          </div>
+
+          <div class="form-group">
+            <label for="telefoneProfissional">Telefone</label>
+            <input type="tel" id="telefoneProfissional" placeholder="(54) 99999-9999" />
+          </div>
+
+          <div class="form-group">
+            <label for="emailProfissional">E-mail</label>
+            <input type="email" id="emailProfissional" placeholder="profissional@email.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="observacaoProfissional">Observações</label>
+            <input type="text" id="observacaoProfissional" placeholder="Ex: atende só pela manhã" />
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Salvar profissional</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card list-card">
+        <div class="section-title">
+          <h2>Lista de profissionais</h2>
+          <span id="contadorProfissionais" class="badge-count">0 profissionais</span>
+        </div>
+
+        <div id="listaProfissionais" class="professional-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/profissionais.js"></script>
+</body>
+</html>
